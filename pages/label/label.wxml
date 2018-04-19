@@ -1,0 +1,10 @@
+<view class="page">
+	<view class="label-title">
+			请选择3个您喜好的标签
+		</view>
+	<view class="label">
+		
+		<view class="label-li {{item.active}}" style="background-color: {{item.bgcolor}};" wx:for="{{label}}" data-index="{{index}}" bindtap="getLabel">{{item.label}}</view>
+	</view>
+	<view class="btn_submit" bindtap="submitLable">提交</view>
+</view>

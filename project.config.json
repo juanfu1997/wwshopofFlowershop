@@ -1,0 +1,198 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wx2a5f7da038ec804d",
+	"projectname": "%E8%96%87%E8%96%87%E5%B0%8F%E5%95%86%E5%BA%97",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "product",
+					"pathName": "pages/product/product",
+					"query": "id=9"
+				},
+				{
+					"id": 2,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": "id=20"
+				},
+				{
+					"id": 3,
+					"name": "myOrder",
+					"pathName": "pages/myOrder/myOrder",
+					"query": "current=1"
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "coupon",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "sort",
+					"pathName": "pages/sort/sort",
+					"query": "id=0"
+				},
+				{
+					"id": 7,
+					"name": "myCoupon",
+					"pathName": "pages/myCoupon/myCoupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "addContact",
+					"pathName": "pages/addContact/addContact",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myContact",
+					"pathName": "pages/myContact/myContact",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "faq",
+					"pathName": "pages/faq/faq",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "register",
+					"pathName": "pages/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "vip",
+					"pathName": "pages/vip/vip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "topup",
+					"pathName": "pages/topup/topup",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "exchange",
+					"pathName": "pages/exchange/exchange",
+					"query": ""
+				},
+				{
+					"id": 17,
+					"name": "orderDetail",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": "id=8"
+				},
+				{
+					"id": 18,
+					"name": "updateContact",
+					"pathName": "pages/updateContact/updateContact",
+					"query": "id=3"
+				},
+				{
+					"id": -1,
+					"name": "vipDesc",
+					"pathName": "pages/vipDesc/vipDesc",
+					"query": ""
+				},
+				{
+					"id": 20,
+					"name": "logistic",
+					"pathName": "pages/logistic/logistic",
+					"query": "id=16"
+				},
+				{
+					"id": -1,
+					"name": "tableOfFlowers",
+					"pathName": "pages/taleOfFlowers/taleOfFlowers",
+					"query": ""
+				},
+				{
+					"id": 22,
+					"name": "calender",
+					"pathName": "pages/calender/calender",
+					"query": "t=311,322,312"
+				},
+				{
+					"id": -1,
+					"name": "ikebana",
+					"pathName": "pages/ikebana/ikebana",
+					"query": ""
+				},
+				{
+					"id": 24,
+					"name": "label",
+					"pathName": "pages/label/label",
+					"query": ""
+				},
+				{
+					"id": 25,
+					"name": "intro",
+					"pathName": "pages/intro/intro",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "labelList=7,8"
+				}
+			]
+		}
+	}
+}

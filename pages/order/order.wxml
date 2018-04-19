@@ -1,0 +1,95 @@
+<view class='page'>
+    <!-- 收货信息 -->
+    <view class='hd'>
+        <view class='info' wx:if="{{info}}">
+            <view class='info-l'>
+                <image src='{{img}}i-location.png' mode='widthFix'></image>
+            </view>
+            <view class='info-c'>
+                <view class='p'>
+                    <text>联系人：{{info.contact}}</text>
+                    <text>电话：{{info.phone}}</text>
+                </view>
+                <view class='p'>
+                    <text>地址：{{info.region+info.address}}</text>
+                </view>
+            </view>
+            <view class='info-r' data-page="myContact" bindtap='goPage'>
+                <view class='arrow-right'></view>
+            </view>
+        </view>
+        <view class='info noInfo' wx:if="{{!info}}" data-page="addContact" bindtap='goPage'>
+            <view class='info-l'>
+                <view class='btn_add'>+</view>
+                <text>新增收货人</text>
+            </view>
+            <view class='info-r'>
+                <view class='arrow-right'></view>
+            </view>
+        </view>
+        <image src='{{img}}ribbon.png' mode='widthFix'></image>
+    </view>
+    <view class='bd'>
+        <!-- 商品列表 -->
+        <view class='list'>
+            <view class='li' wx:for="{{order.list}}" wx:key='{{index}}'>
+                <view class='img'>
+                    <image src='{{item.image}}' mode='aspectFill'></image>
+                </view>
+                <view class='info'>
+                    <view class='info-hd'>
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class='info-bd'>
+                        <text>颜色分类：{{item.color}} 尺码：{{item.size}}</text>
+                    </view>
+                    <view class='info-ft'>
+                        <text>¥{{item.price}}</text>
+                        <text class='nums'>X{{item.count}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 配送信息 -->
+        <view class='detail'>
+            <view class='p'>
+                <text>配送方式</text>
+                <text>{{freight}}</text>
+            </view>
+            <view class='p'>
+                <text>商家优惠</text>
+                <view class='discount' data-page="myCoupon" bindtap='goPage'>
+                    <text>{{coupon.text}}</text>
+                    <view class='arrow-right'></view>
+                </view>
+            </view>
+            <view class='p'>
+                <text>买家留言</text>
+                <input type='text' placeholder='点击给商家留言' bindinput='input'></input>
+            </view>
+        </view>
+    </view>
+    <!-- 订单金额 -->
+    <view class='ft'>
+        <view class='p'>
+            <text>商品金额</text>
+            <text>¥{{product_price2}}</text>
+        </view>
+        <view class='p'>
+            <text>商家优惠</text>
+            <text>-¥{{discount2}}</text>
+        </view>
+        <view class='p'>
+            <text>运费</text>
+            <text>+¥{{fare2}}</text>
+        </view>
+    </view>
+    <!-- 底部栏 -->
+    <view class='account'>
+        <view class='account-c'>
+            <text>合计：</text>
+            <text class='price'>¥{{all_price}}</text>
+        </view>
+        <view class='account-r' bindtap='submitOrder'>提交订单</view>
+    </view>
+</view>

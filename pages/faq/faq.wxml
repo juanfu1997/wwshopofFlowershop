@@ -1,0 +1,11 @@
+<!-- 渲染html -->
+<import src="/dist/wxParse/wxParse.wxml" />
+
+<view class="page">
+    <view class='list'>
+        <image src='{{img}}faq/img{{index+1}}.jpg' mode='widthFix' wx:for="{{list}}" wx:key="{{index}}"></image>
+    </view>
+    <view class='content'>
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+</view>

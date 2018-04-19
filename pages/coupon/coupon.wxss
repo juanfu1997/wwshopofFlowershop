@@ -1,0 +1,156 @@
+/**
+ * 优惠券
+ */
+
+.cardList {
+    padding-top: 20rpx;
+}
+
+.cardList .li {
+    position: relative;
+    margin: 20rpx 30rpx;
+}
+
+.cardList .li .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 40rpx 0;
+}
+
+.cardList .li .info .info-l {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c90265;
+    border-right: 1px dashed #d2d2d2;
+    font-size: 48rpx;
+}
+
+.cardList .li .info .info-c {
+    flex: 0 0 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8rpx 0 8rpx 15rpx;
+}
+
+.cardList .li .info .info-c .h2 {
+    display: flex;
+}
+
+.cardList .li .info .info-c .h2 .em {
+    display: flex;
+    align-items: center;
+    height: 32rpx;
+    margin-right: 10rpx;
+    padding: 0 10rpx;
+    background-color: #c90265;
+    color: #fff;
+    font-size: 22rpx;
+}
+
+.cardList .li .info .info-c .h2 .span {
+    font-size: 26rpx;
+    line-height: 32rpx;
+}
+
+.cardList .li .info .info-c .p {
+    color: #8a8a8a;
+    font-size: 26rpx;
+}
+
+.cardList .li .info .info-r {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cardList .li .info .info-r text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110rpx;
+    height: 110rpx;
+    background-color: #c90265;
+    color: #fff;
+    border-radius: 20rpx;
+    font-size: 32rpx;
+    line-height: 1;
+}
+
+.cardList .li .info .info-r .disabled {
+    background-color: #b1b1b1;
+}
+
+.cardList .no_data {
+    margin-top: 30%;
+    color: #626262;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.cardList .no_data image {
+    width: 30%;
+    margin: 0 auto 40rpx auto;
+}
+
+/**
+ * 弹层
+ */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup .box {
+    position: relative;
+    width: 80%;
+    margin: 20% auto;
+    padding: 60rpx 0;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+
+.popup .box image {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.popup .box .h2 {
+    margin-top: 10rpx;
+    color: #c90265;
+    font-size: 50rpx;
+    line-height: 1;
+    text-align: center;
+}
+
+.popup .box .hint {
+    margin: 30rpx 0 60rpx 20%;
+    font-size: 34rpx;
+    line-height: 50rpx;
+}
+
+.popup .box .p .a {
+    color: #c90265;
+}
+
+.popup .box .btn_sure {
+    width: 36%;
+    height: 80rpx;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    text-align: center;
+}

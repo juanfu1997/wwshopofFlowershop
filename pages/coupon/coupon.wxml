@@ -1,0 +1,44 @@
+<view class="page">
+    <!-- 优惠券 -->
+    <view class='cardList'>
+        <view class='li' wx:for='{{list}}' wx:key="{{index}}">
+            <image src='{{img}}card_bg2.png' mode='widthFix'></image>
+            <view class='info'>
+                <view class='info-l'>¥ {{item.face_value}}</view>
+                <view class='info-c'>
+                    <view class='h2'>
+                        <view class='em'>使用门槛</view>
+                        <view class='span'>{{item.threshold>0?"满"+item.threshold+"使用":"无门槛"}}</view>
+                    </view>
+                    <view class='p'>开始时间：{{item.start_time}}</view>
+                    <view class='p'>有效期至：{{item.end_time}}</view>
+                </view>
+                <view class='info-r'>
+                    <text wx:if="{{!item.status}}" data-idx='{{index}}' data-id='{{item.id}}' bindtap='receive'>立即\n领取</text>
+                    <text wx:if="{{item.status}}" class="disabled">您已\n领取</text>
+                </view>
+            </view>
+        </view>
+        <view class='no_data' wx:if="{{!list.length}}">
+            <image src='{{img}}coupon.png' mode='widthFix'></image>
+            <text>暂无优惠劵</text>
+        </view>
+    </view>
+    <!-- 弹层 -->
+    <view class='popup' hidden='{{!showPopup}}'>
+        <view class='box'>
+            <image src='{{img}}success.png' mode='widthFix'></image>
+            <view class='h2'>领取成功</view>
+            <view class='hint'>
+                <view class='p'>优惠券我们已经帮您放到</view>
+                <view class='p'> “
+                    <text class='a' data-page="myCoupon" bindtap='goPage'>我的-优惠劵</text>”中，付款时</view>
+                <view class='p'>
+                    <text>会根据金额自动抵扣，\n快去购物吧！</text>
+                </view>
+                <view class='p'> </view>
+            </view>
+            <view class='btn_sure' bindtap='togglePopup'>好的</view>
+        </view>
+    </view>
+</view>

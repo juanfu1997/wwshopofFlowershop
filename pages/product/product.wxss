@@ -1,0 +1,265 @@
+@import "/dist/tabbar/index.wxss";
+@import "/dist/wxParse/wxParse.wxss";
+
+.page {
+    padding-bottom: 140rpx;
+}
+
+/**
+ * 商品信息
+ */
+
+.hd {
+    min-height: 400rpx;
+}
+
+.bd .info {
+    padding: 30rpx 40rpx;
+    font-size: 40rpx;
+    line-height: 1;
+}
+
+.bd .info .p {
+    position: relative;
+    margin-top: 20rpx;
+    color: #c90265;
+    font-size: 40rpx;
+}
+
+.bd .info .p .amount {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #373737;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+
+/**
+ * 商品详情
+ */
+
+.bd .detail {
+    padding-top: 60rpx;
+    border-top: 10rpx solid #f3f3f3;
+}
+
+.detail .title {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 40rpx;
+    border-top: 1px solid #c90265;
+}
+
+.detail .title .h2 {
+    position: absolute;
+    top: -20rpx;
+    left: 50%;
+    width: 200rpx;
+    margin-left: -100rpx;
+    background-color: #fff;
+    color: #303030;
+    font-size: 40rpx;
+    line-height: 1;
+    text-align: center;
+}
+
+.bd .detail .desc {
+    padding: 0 20rpx;
+    color: #4d4d4d;
+    font-size: 28rpx;
+    line-height: 48rpx;
+}
+
+/**
+ * 弹层
+ */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup .box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.box-hd {
+    padding: 20rpx 0;
+}
+
+.box-hd .btn_wp {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box-hd .btn_close {
+    position: relative;
+    overflow: hidden;
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 40rpx;
+}
+
+.box-hd .btn_close::before, .box-hd .btn_close::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #b8b8b8;
+}
+
+.box-hd .btn_close::before {
+    transform: rotate(45deg);
+}
+
+.box-hd .btn_close::after {
+    transform: rotate(-45deg);
+}
+
+.box-hd .info {
+    display: flex;
+    padding: 10rpx 40rpx;
+}
+
+.box-hd .info .info-l {
+    flex: 0 0 28%;
+    margin-right: 20rpx;
+    border: 1px solid #c1c1c1;
+}
+
+.box-hd .info .info-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 36rpx;
+}
+
+.box-hd .info .info-r .info-box {
+    display: flex;
+    align-items: center;
+}
+
+.box-hd .info .info-r .price {
+    color: #c90265;
+}
+
+.box-hd .info .info-r .stock {
+    margin-left: 10rpx;
+    font-size: 28rpx;
+}
+
+/* 颜色分类 */
+
+.box-hd .row {
+    padding: 20rpx 40rpx;
+    border-bottom: 1px solid #dcdbdc;
+}
+
+.box-hd .row .h2 {
+    font-size: 36rpx;
+}
+
+.box-hd .row .ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-hd .row .ul .li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    height: 70rpx;
+    margin-left: 4%;
+    margin-top: 20rpx;
+    background-color: #dcdbdc;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+}
+
+.box-hd .row .ul .li:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+.box-hd .row .ul .active {
+    background-color: #c90265;
+    color: #fff;
+}
+
+/**
+ * 购买数量
+ */
+
+.box-bd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40rpx;
+}
+
+.box-bd text {
+    font-size: 32rpx;
+}
+
+.box-bd .nums {
+    overflow: hidden;
+    display: flex;
+    border: 1px solid #d2d2d2;
+    border-radius: 20rpx;
+}
+
+.box-bd .nums .btn {
+    position: relative;
+    overflow: hidden;
+    width: 100rpx;
+    height: 70rpx;
+    background-color: #dcdbdc;
+}
+
+.box-bd .nums .btn::before, .box-bd .nums .btn::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20rpx;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -10rpx;
+    background: #000;
+}
+
+.box-bd .nums .btn_plus::after {
+    transform: rotate(90deg);
+}
+
+.box-bd .nums input {
+    width: 120rpx;
+    height: 70rpx;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    font-size: 36rpx;
+    line-height: 70rpx;
+    text-align: center;
+}
+
+.box-ft {
+    background-color: #c90265;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 100rpx;
+    text-align: center;
+}

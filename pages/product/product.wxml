@@ -1,0 +1,73 @@
+<!-- 渲染html -->
+<import src="/dist/wxParse/wxParse.wxml" />
+<!-- 底部导航 -->
+<import src='/dist/tabbar/index.wxml' />
+<template is="tabbar" data="{{..._tabbar_}}" />
+
+<view class='page'>
+    <!-- 商品信息 -->
+    <view class='hd'>
+        <image src='{{info.product_cover}}' mode='widthFix'></image>
+    </view>
+    <view class='bd'>
+        <view class='info'>
+            <view class='h3'>{{info.product_name}}</view>
+            <view class='p'> ¥{{info.price}}
+                <view class='amount'> 销量：{{info.sales_volume}}件 </view>
+            </view>
+        </view>
+        <!-- 商品详情 -->
+        <view class='detail'>
+            <view class='title'>
+                <view class='h2'>商品详情</view>
+            </view>
+            <view class='desc'>
+                <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+            </view>
+        </view>
+    </view>
+    <!-- 弹层 -->
+    <view class='popup' hidden='{{!showPopup}}'>
+        <view class='box'>
+            <view class='box-hd'>
+                <view class='btn_wp'>
+                    <view class='btn_close' bindtap='togglePopup'></view>
+                </view>
+                <view class='info'>
+                    <view class='info-l'>
+                        <image src='{{info.product_cover}}' mode='widthFix'></image>
+                    </view>
+                    <view class='info-r'>
+                        <view class='title'>{{info.product_name}}</view>
+                        <view class='info-box'>
+                            <view class='price'>¥{{info.price}}</view>
+                            <view class='stock'>（库存{{info.stock}}件）</view>
+                        </view>
+                    </view>
+                </view>
+                <view class='row'>
+                    <view class='h2'>颜色分类</view>
+                    <view class='ul'>
+                        <view class='li active'>{{info.color}}</view>
+                    </view>
+                </view>
+                <view class='row'>
+                    <view class='h2'>尺码</view>
+                    <view class='ul'>
+                        <view class="li {{info.currentSize==item?'active':''}}" wx:for="{{info.sizeArr}}" wx:key="{{index}}" data-size="{{item}}" bindtap='tapSize'>{{item}}</view>
+                    </view>
+                </view>
+            </view>
+            <!-- 购买数量 -->
+            <view class='box-bd'>
+                <text>购买数量</text>
+                <view class='nums'>
+                    <view class='btn btn_minus' bindtap='minus'></view>
+                    <input type='number' value='{{count}}' disabled="true"></input>
+                    <view class='btn btn_plus' bindtap='plus'></view>
+                </view>
+            </view>
+            <view class='box-ft' bindtap='submit'>确定</view>
+        </view>
+    </view>
+</view>

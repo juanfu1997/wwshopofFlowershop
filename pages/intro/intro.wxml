@@ -1,0 +1,15 @@
+<!--pages/article/article.wxml-->
+<import src="/lib/wxParse/wxParse.wxml" />
+<import src='/template/header/header.wxml' />
+<view class="page">
+  <template is="header" data="{{...header}}"/>
+  <view class="content">
+    <view class="title">
+      <!-- {{subTitle}} -->
+      <template is="wxParse" data="{{wxParseData:title1.nodes}}" />
+    </view>
+    <view class="detail">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>

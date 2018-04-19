@@ -1,0 +1,40 @@
+<view class="page">
+    <!-- 导航栏 -->
+    <view class='nav'>
+        <view class="li {{item.active?'active':''}}" wx:for="{{nav}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapNav">{{item.name}}</view>
+    </view>
+    <!-- 优惠券列表 -->
+    <view class='cardList' wx:for="{{nav}}" wx:key="{{index}}" hidden="{{!item.active}}">
+        <view class='li' wx:for='{{item.list}}' wx:key="{{index}}">
+            <image src='{{img}}card_bg2.png' mode='widthFix'></image>
+            <view class='info'>
+                <view class='info-l'>¥ {{item.face_value}}</view>
+                <view class='info-c'>
+                    <block wx:if="{{!item.product_name}}">
+                        <view class='h2'>
+                            <view class='em'>使用门槛</view>
+                            <view class='span'>{{item.threshold>0?"满"+item.threshold+"使用":"无门槛"}}</view>
+                        </view>
+                        <view class='p'>开始时间：{{item.start_time}}</view>
+                        <view class='p'>有效期至：{{item.end_time}}</view>
+                    </block>
+					<block wx:if="{{item.product_name}}">
+                        <view class='h2'>
+                            <view class='em'>积分兑换</view>
+                            <view class='span'>{{item.threshold}}积分</view>
+                        </view>
+                        <view class='p'>购买{{item.product_name}}立减{{item.face_value}}元</view>
+                    </block>
+                </view>
+                <view class="info-r {{item.status?'disabled':''}}" data-item="{{item}}" bindtap="tapBtn">
+                    <text>{{item.btn}}</text>
+                </view>
+            </view>
+        </view>
+        <view class='no_data' wx:if="{{!item.list.length}}">
+            <image src='{{img}}coupon.png' mode='widthFix'></image>
+            <text>暂无优惠劵</text>
+        </view>
+        <view class="btn_receive" wx:if="{{index==0&&!item.list.length}}" data-page="coupon" bindtap="goPage">去领取</view>
+    </view>
+</view>

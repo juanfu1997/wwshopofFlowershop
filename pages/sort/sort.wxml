@@ -1,0 +1,23 @@
+<!-- 底部导航 -->
+<import src='/dist/tabbar/index.wxml' />
+<template is="tabbar" data="{{..._tabbar_}}" />
+
+<view class='page'>
+    <!-- 左侧栏 -->
+    <view class='sidebar'>
+        <view class="li {{current==item.id?'active':''}}" wx:for="{{sidebar}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="tapLi">{{item.weiwei_type}}</view>
+    </view>
+    <!-- 产品列表 -->
+    <view class='list'>
+        <view class='li' wx:for='{{list}}' wx:key="{{index}}" data-page="product" data-param='id={{item.id}}' bindtap='goPage'>
+            <image src='{{item.product_cover}}' mode='widthFix'></image>
+            <view class='info'>
+                <view class='title'>{{item.product_name}}</view>
+                <view class='price'>¥{{item.price}}</view>
+                <view class='label'>
+                    <text>购买</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

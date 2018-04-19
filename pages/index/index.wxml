@@ -1,0 +1,89 @@
+<!-- 底部导航 -->
+<import src='/dist/tabbar/index.wxml' />
+<template is="tabbar" data="{{..._tabbar_}}" />
+
+<view class='page'>
+    <view class='hd' hidden="1">
+        <!-- 顶部轮播 -->
+        <swiper autoplay="true" indicator-dots="true" indicator-color="#fff" indicator-active-color="#c90265">
+            <swiper-item wx:for="{{sliders[0]}}" wx:key="{{index}}">
+                <image src="{{item.silderImg}}" mode="widthFix"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="tool-box">
+        <view class="tool" wx:for="{{tool}}" data-index="{{index}}" data-page="{{item.page}}" bindtap="goToolpage">
+            <image class="tool-icon" mode="widthFix" src="{{item.img}}"></image>
+            <view class="tool-text">{{item.text}}</view>
+        </view>
+    </view>
+    <view class='bd'>
+        <!-- 优惠券 -->
+        <view class='cardList' wx:if="{{coupon.length}}">
+            <view class='li' wx:for='{{coupon}}' wx:key="{{index}}" data-page="coupon" bindtap='goPage'>
+                <image src='{{img}}card_bg.png' mode='widthFix'></image>
+                <view class='info'>
+                    <view class='info-l' style="font-size:{{item.face_value<100?'70':'50'}}rpx;">{{item.face_value}}</view>
+                    <view class='info-r'>
+                        <view class='p'>{{item.threshold>0?"满"+item.threshold+"使用":"无门槛"}}</view>
+                        <view class='h2'>元优惠券</view>
+                        <view class='label'>点击领取</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 推荐标题 -->
+        <view class='recommend_title'>/本/店/推/荐/</view>
+        <!-- 推荐图 -->
+       <!--  <view class='recommend_pic'>
+            <image src='{{sliders[1][0].silderImg}}' mode='widthFix'></image>
+        </view> -->
+        <!--  标签身份  -->
+        <view class="label">
+            <view class="label-list">
+                <view class="label-li"  wx:for="{{labelarr}}" style="background-color: {{item.bgcolor}};">{{item.label}}</view>
+            </view>
+            <view class="label-switch" bindtap="switchLabel">切换</view>
+        </view>
+        <!-- 推荐产品列表 -->
+        <view class='list'>
+            <view class='li' wx:for='{{listArr[0].list}}' wx:key="{{index}}" data-page="product" data-param='id={{item.id}}' bindtap='goPage'>
+                <image src='{{item.product_cover}}' mode='widthFix'></image>
+                <view class='info'>
+                    <view class='title'>{{item.product_name}}</view>
+                    <view class='price'>¥{{item.price}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="lableArea" wx:for="22">
+            <view class="lableTitle">
+                <view style="font-size: 40rpx; color: #737373;">爱情鲜花送</view>
+                <view style="font-size: 28rpx;color: #707070">·让你怦然心动的人</view>
+            </view>
+            <view class="category">
+                <image class="category-img" mode="widthFix" src="https://img02.hua.com/pc/pimg/banner_love.jpg"></image>
+                <text class="category-text"> 爱情鲜花 \n>>> </text>
+            </view>
+            <view class="category-list" >
+                <view class="category-goods" wx:for="55555">
+                    <image class="goods-img" mode="widthFix" src="../../image/taleOfFlower.png"></image>
+                    <view class="goods-price">￥20</view>
+                </view>
+            </view>
+        </view>
+        <!-- 推荐图 -->
+        <!-- <view class='recommend_pic'>
+            <image src='{{sliders[2][0].silderImg}}' mode='widthFix'></image>
+        </view> -->
+        <!-- 推荐产品列表 -->
+        <!-- <view class='list'>
+            <view class='li' wx:for='{{listArr[1].list}}' wx:key="{{index}}" data-page="product" data-param='id={{item.id}}' bindtap='goPage'>
+                <image src='{{item.product_cover}}' mode='widthFix'></image>
+                <view class='info'>
+                    <view class='title'>{{item.product_name}}</view>
+                    <view class='price'>¥{{item.price}}</view>
+                </view>
+            </view>
+        </view> -->
+    </view>
+</view>

@@ -1,0 +1,80 @@
+<view class='page'>
+    <!-- 导航 -->
+    <view class='nav'>
+        <view class="li {{current==index?'active':''}}" wx:for="{{nav}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapNav">{{item.name}}</view>
+    </view>
+    <!-- 订单列表 -->
+    <view class='list' wx:for="{{nav}}" wx:key="{{index}}" hidden="{{current!=index}}">
+        <view class='li' wx:for="{{item.list}}" wx:key='{{index}}'>
+            <view class='li-hd'>
+                <view class='status'>{{item.statusText}}</view>
+            </view>
+            <view class='li-bd' data-page="orderDetail" data-param="id={{item.id}}" bindtap='goPage'>
+                <view class='productList'>
+                    <view class='productLi' wx:for="{{item.productList}}" wx:key="{{index}}">
+                        <view class='img'>
+                            <image src='{{item.product_cover}}' mode='aspectFill'></image>
+                        </view>
+                        <view class='info'>
+                            <view class='info-hd'>
+                                <text>{{item.product_name}}</text>
+                            </view>
+                            <view class='info-bd'>
+                                <text>颜色分类：{{item.color}} 尺码：{{item.size}}</text>
+								<text>X{{item.number}}</text>
+                            </view>
+                            <view class='info-ft'>
+                                <text>¥{{item.price}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='p'>
+                    <text>共{{item.productList.length}}件商品   合计：¥{{item.all_price}}（含运费¥{{item.freight_price}}）</text>
+                </view>
+            </view>
+            <!-- 按钮 -->
+            <view class='li-ft' wx:if="{{item.status !=2 && item.status != 5}}">
+                <block wx:if="{{item.status==0}}">
+                    <view class='btn' data-id="{{item.id}}" data-status="5" bindtap='tapBtn'>取消订单</view>
+                    <view class='btn active' data-id="{{item.id}}" data-status="1" data-all_price="{{item.all_price}}" data-order_pay_id="{{item.order_pay_id}}" bindtap="tapBtn">付款</view>
+                </block>
+                <block wx:if="{{item.status==1}}">
+                    <view class='btn' data-id="{{item.id}}" data-status="2" data-order_pay_id="{{item.order_pay_id}}" bindtap="tapBtn">退款</view>
+                    <view class='btn active' data-id="{{item.id}}" data-status="6" bindtap="tapBtn">提醒发货</view>
+                </block>
+                <block wx:if="{{item.status==3}}">
+                    <view class='btn' data-page="logistic" data-param="id={{item.id}}" bindtap="goPage">查看物流</view>
+                    <view class='btn active' data-id="{{item.id}}" data-status="4" bindtap="tapBtn">确认收货</view>
+                </block>
+                <block wx:if="{{item.status==4}}">
+                    <view class='btn' data-id="{{item.id}}" data-status="-1" bindtap="tapBtn">删除订单</view>
+                </block>
+            </view>
+        </view>
+        <view class='no_data' wx:if="{{!item.list.length}}">暂无数据</view>
+    </view>
+    <!-- 订单完成弹层 -->
+    <view class='popup' hidden='{{!showSuccess}}'>
+        <view class='box'>
+            <image src='{{img}}orderSuccess.png' mode='widthFix'></image>
+            <view class='h2'>订单完成</view>
+            <view class='p'>
+                <text>您的订单已完成，\n欢迎再次光临选购！ </text>
+            </view>
+            <view class='btn_wp'>
+                <view class='btn' bindtap='toggleSuccess'>好的</view>
+            </view>
+        </view>
+    </view>
+    <!-- 提醒卖家发货弹层 -->
+    <view class='popup popup1' hidden='{{!showSuccess1}}'>
+        <view class='box'>
+            <image src='{{img}}noticeSuccess.png' mode='widthFix'></image>
+            <view class='h2'>提醒卖家发货成功</view>
+            <view class='btn_wp'>
+                <view class='btn' bindtap='toggleSuccess1'>好的</view>
+            </view>
+        </view>
+    </view>
+</view>

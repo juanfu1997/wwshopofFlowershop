@@ -1,0 +1,29 @@
+page {
+    background-color: #f2f2f2;
+}
+.hd{
+	padding: 20rpx 40rpx;
+	background-color: #fff;
+	font-size: 30rpx;
+}
+.list {
+    margin-top: 20rpx;
+    padding-left: 40rpx;
+    background-color: #fff;
+}
+
+.list .li {
+    padding: 20rpx;
+	color: #444;
+    border-top: 1px solid #ccc;
+    font-size: 28rpx;
+}
+
+.list .li:nth-child(1) {
+    border-top: 0;
+}
+
+.list .li .time {
+    margin-top: 10rpx;
+    color: #999;
+}

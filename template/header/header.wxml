@@ -1,0 +1,11 @@
+<template name="header">
+    <view class="header">
+        <view class="i-back icon" bindtap="goBack">
+            <image src="../../image/i-back.png"></image>
+        </view>
+        <text>{{title}}</text>
+        <view class="i-search icon" bindtap="goHome">
+            <image src="../../image/home.png"></image>
+        </view>
+    </view>
+</template>

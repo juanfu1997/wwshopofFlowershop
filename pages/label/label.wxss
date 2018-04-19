@@ -1,0 +1,51 @@
+page{
+	width:100%;
+	height: 100%;
+}
+.page{
+	width: 100%;
+	height: 100%;
+}
+.page .btn_submit {
+    width: 40%;
+    margin: 40rpx auto;
+    padding-top: 18rpx;
+    padding-bottom: 18rpx;
+    background-color: #7d6b86;
+    color: #fff;
+    border-radius: 10rpx;
+    font-size: 32rpx;
+    line-height: 1;
+    text-align: center;
+}
+.label{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20rpx;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.label-title{
+	font-size: 28rpx;
+	color: #605068;
+	line-height:30rpx;
+	text-align:center;
+}
+.label-li{
+	/*flex: 0 0 30%;*/
+	width:200rpx;
+	font-size:28rpx;
+	padding-top: 24rpx;
+	padding-bottom: 24rpx;
+	line-height:1;
+	margin-bottom:30rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	color: #fff;
+}
+.active{
+	color: #7d6b86;
+  border: 1px solid #7d6b86;
+}

@@ -1,0 +1,15 @@
+<view class="page">
+    <view class='hd'>
+        <view class='p'>快递单号：
+            <text selectable>{{info.LogisticCode}}</text>
+        </view>
+        <view class='p'>快递公司：{{couriername}}</view>
+    </view>
+    <view class="list">
+        <view class="li" wx:for="{{info.Traces}}" wx:key="{{index}}">
+            <view class='p'>{{item.AcceptStation}}</view>
+            <view class="time">{{item.AcceptTime}}</view>
+        </view>
+        <view class='li' wx:if="{{!info.Traces.length}}">{{info.Reason}}</view>
+    </view>
+</view>

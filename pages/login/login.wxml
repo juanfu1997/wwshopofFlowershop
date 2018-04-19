@@ -1,0 +1,22 @@
+<view class="page">
+    <form bindsubmit="formSubmit">
+        <view class="section">
+            <input type='number' placeholder='请输入手机号码' maxlength='11' name="phone"></input>
+        </view>
+        <view class="section">
+            <input password placeholder='请输入密码' name="password"></input>
+        </view>
+        <!-- <view class="section">
+            <input type='number' placeholder='验证码' maxlength='6' name="code"></input>
+            <view class="btn_code" wx:if="{{!second}}" bindtap='getCode'>获取验证码</view>
+            <view class="btn_code disabled" wx:if="{{second}}">{{second}}</view>
+        </view> -->
+        <view class="btn_login">
+            <button formType="submit">登录</button>
+        </view>
+        <view class='btns'>
+            <view class='btn_back' data-page="index" bindtap='goPage'>回到首页</view>
+            <view class='btn_register' data-page="register" bindtap='goPage'>注册会员</view>
+        </view>
+    </form>
+</view>

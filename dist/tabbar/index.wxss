@@ -1,0 +1,243 @@
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    box-shadow: 0 1px #cecece inset, 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/**
+ * tab
+ */
+
+.tabbar .tab {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabbar .tab image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.tabbar .tab text {
+    color: #7f0d26;
+    font-size: 26rpx;
+    line-height: 1;
+}
+
+.tabbar .active text {
+    color: #000;
+}
+
+/**
+ * tab1
+ */
+
+.tabbar .tab1 {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid #dcdbdc;
+}
+
+.tabbar .tab1:nth-child(1) {
+    border-left: 0;
+}
+
+.tabbar .tab1 image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.tabbar .tab1 text {
+    margin-top: 6rpx;
+    font-size: 26rpx;
+    line-height: 1;
+}
+
+.tabbar .tab1.active::before {
+    content: '';
+    position: absolute;
+    top: 20rpx;
+    right: 30rpx;
+    width: 14rpx;
+    height: 14rpx;
+    background-color: #c90265;
+    border-radius: 50%;
+}
+
+/**
+ * tab2
+ */
+
+.tabbar .tab2 {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
+
+.tabbar .tab2 image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.tabbar .tab2 text {
+    margin-top: 6rpx;
+    font-size: 26rpx;
+    line-height: 1;
+}
+
+.tabbar .tab2.active text {
+    color: #c90265;
+}
+
+/**
+ * tab3
+ */
+
+.tabbar .tab3 {
+    position: relative;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 15rpx;
+    padding-bottom: 10rpx;
+}
+
+.tabbar .tab3 .line {
+    width: 30%;
+    height: 4px;
+    margin: 0 auto;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.tabbar .tab3 .text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    color: #050505;
+    border-right: 1px solid #ddd;
+    font-size: 30rpx;
+}
+
+.tabbar .tab3:last-child .text {
+    border-right: 0;
+}
+
+.tabbar .tab3 .ul {
+    position: absolute;
+    bottom: 130%;
+    left: 2%;
+    width: 96%;
+    padding: 10rpx;
+    background-color: #fff;
+    border: 1px solid #cecece;
+}
+
+.tabbar .tab3 .ul::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 10px;
+    height: 9px;
+    margin-left: -7px;
+    background-color: #fff;
+    border-bottom: 1px solid #cecece;
+    border-left: 1px solid #cecece;
+    transform: rotate(-55deg) skew(-20deg);
+}
+
+.tabbar .tab3 .ul .li {
+    height: 80rpx;
+    border-top: 1px solid #cecece;
+    font-size: 28rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.tabbar .tab3 .ul .li:nth-child(1) {
+    border-top: 0;
+}
+
+/**
+ * 按钮
+ */
+
+.tabbar button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: #5a7b88;
+    border-radius: 0;
+    font-size: 80rpx;
+    line-height: 120rpx;
+    opacity: 0;
+}
+
+.tabbar button::after {
+    content: none;
+}
+
+.tabbar .btn {
+    background-color: #c90265;
+    color: #fff;
+    font-size: 30rpx;
+    line-height: 120rpx;
+    text-align: center;
+}
+
+.tabbar .btn1 {
+    flex: 2;
+	background-color: #de75a9;
+}
+
+.tabbar .btn2 {
+    flex: 0 0 23%;
+    margin-right: 20rpx;
+    height: 90rpx;
+    background: none;
+    color: #000;
+    border: 1px solid #aaa;
+    line-height: 90rpx;
+}
+
+.tabbar .btn3 {
+    flex: 0 0 23%;
+    height: 90rpx;
+    margin-right: 20rpx;
+    line-height: 90rpx;
+}
+
+.tabbar .btn4 {
+    flex: 2;
+    margin-left: 2px;
+    background-color: #c90265;
+}

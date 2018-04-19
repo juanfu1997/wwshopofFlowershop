@@ -1,0 +1,9 @@
+<view class="page">
+	<view class="remindType">
+		<view class="typeList">
+			 <view class="typeState"></view>
+			 <view class="typeName"></view>
+			 <!-- <view class="typeState"></view> -->
+		</view>
+	</view>
+</view>

@@ -1,0 +1,40 @@
+/* pages/article/article.wxss */
+@import "../../lib/wxParse/wxParse.wxss";
+@import "../../template/header/header.wxss";
+page {
+  padding-top: 86rpx;
+}
+
+.content {
+  padding: 0 5%;
+}
+
+.content .title {
+  margin: 10rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 42rpx;
+}
+
+.content .detail {
+  color: #666;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  word-break: break-all;
+}
+
+.content .detail image{
+  margin: 10rpx auto;
+  width: 100%;
+}
+
+.content .detail video {
+  margin: 40rpx 0;
+  width: 100%;
+}
+
+/*  专门针对这个百科的修改*/
+
+.content {
+    padding-bottom: 30rpx;
+}

@@ -1,0 +1,14 @@
+<view class="page">
+    <view class='hd'>
+        <view class='row'>
+            <image src='{{img}}i-card.png' mode='aspectFit'></image>
+			<text>会员卡：NO.{{user.phone}}</text>
+        </view>
+		<view class='row'>
+            <image src='{{img}}i-money.png' mode='aspectFit'></image>
+			<text>充值金额</text>
+			<input type='digit' data-name="total_fee" value="{{input.total_fee}}" bindinput='input'></input>
+        </view>
+		<view class='btn_submit' bindtap='topup'>立即充值</view>
+    </view>
+</view>

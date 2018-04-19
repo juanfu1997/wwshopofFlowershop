@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="list">
+        <view class="li">
+            <text>联系人</text>
+            <input placeholder='名字' data-name="contact" bindinput='input'></input>
+        </view>
+        <view class="li">
+            <text>手机号码</text>
+            <input type='number' maxlength='11' placeholder='11位手机号' data-name="phone" bindinput='input'></input>
+        </view>
+        <view class="li">
+			<text>选择地区</text>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+                <view class="picker">
+                    {{region[0]}} {{region[1]}} {{region[2]}}
+                </view>
+            </picker>
+        </view>
+		<view class="li">
+            <text>详细地址</text>
+            <input placeholder='街道门牌信息' data-name="address" bindinput='input'></input>
+        </view>
+        <view class="li">
+            <text>邮政编码</text>
+            <input type='number' maxlength='11' placeholder='邮政编码' data-name="post_code" bindinput='input'></input>
+        </view>
+    </view>
+    <view class='btn_wp'>
+        <view class='btn' data-open-type='back' bindtap='goPage'>取消</view>
+        <view class='btn' bindtap='submit'>完成</view>
+    </view>
+</view>

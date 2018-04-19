@@ -1,0 +1,57 @@
+page {
+    background-color: #f2f2f2;
+}
+
+.list {
+    margin-top: 20rpx;
+    padding-left: 40rpx;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.list .li {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 40rpx 20rpx 10rpx;
+    border-top: 1px solid #e5e5e5;
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+
+.list .li:nth-child(1) {
+    border-top: 0;
+}
+
+.list .li text {
+    flex: 0 0 25%;
+}
+
+.list .li input {
+    flex: 1;
+}
+
+.list .li radio {
+    display: flex;
+}
+
+/**
+ * 按钮
+ */
+
+.btn_wp {
+    display: flex;
+    justify-content: center;
+    margin-top: 40rpx;
+}
+
+.btn_wp .btn {
+    width: 30%;
+    height: 80rpx;
+    margin: 0 10rpx;
+    background-color: #c90265;
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    text-align: center;
+}

@@ -1,0 +1,81 @@
+<view class='page'>
+    <!-- 收货信息 -->
+    <view class='hd'>
+        <view class='info'>
+            <view class='info-l'>
+                <image src='{{img}}i-location.png' mode='widthFix'></image>
+            </view>
+            <view class='info-c'>
+                <view class='p'>
+                    <text>联系人：{{detail.contact}}</text>
+                    <text>电话：{{detail.phone}}</text>
+                </view>
+                <view class='p'>
+                    <text>地址：{{detail.region+detail.address}}</text>
+                </view>
+            </view>
+            <view class='info-r' data-page="myContact" bindtap='goPage'>
+                <view class='arrow-right'></view>
+            </view>
+        </view>
+        <view class='msg'>
+            <view class='msg-l'>
+                <image src='{{img}}i-msg.png' mode='widthFix'></image>
+            </view>
+            <view class='msg-c'>
+                <text>买家留言：</text>
+                <text>{{info.leaving_message||'无'}}</text>
+            </view>
+        </view>
+    </view>
+    <view class='bd'>
+        <!-- 商品列表 -->
+        <view class='list'>
+            <view class='li' wx:for="{{info.productList}}" wx:key='{{index}}'>
+                <view class='img'>
+                    <image src='{{item.product_cover}}' mode='aspectFill'></image>
+                </view>
+                <view class='info'>
+                    <view class='info-hd'>
+                        <text>{{item.product_name}}</text>
+                    </view>
+                    <view class='info-bd'>
+                        <text>颜色分类：{{item.color}} 尺码：{{item.size}}</text>
+                    </view>
+                    <view class='info-ft'>
+                        <text>¥{{item.price}}</text>
+                        <text class='nums'>X{{item.number}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 订单金额 -->
+        <view class='order'>
+            <view class='p'>
+                <text>商品金额</text>
+                <text>¥{{info.product_price}}</text>
+            </view>
+            <view class='p'>
+                <text>商家优惠</text>
+                <text>-¥{{info.coupon_price}}</text>
+            </view>
+            <view class='p'>
+                <text>运费</text>
+                <text>+¥{{info.freight_price}}</text>
+            </view>
+            <view class='p'>
+                <text>实付款（包含运费）</text>
+                <text>¥{{info.all_price}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 订单金额 -->
+    <view class='ft'>
+        <view class='p' wx:if="{{info.transaction_id}}">
+            <text>支付交易单号：{{info.transaction_id}}</text>
+        </view>
+        <view class='p'>
+            <text>创建时间：{{info.addtime}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,150 @@
+page {
+    background-color: #f2f2f2;
+}
+
+/**
+ * 导航栏
+ */
+
+.nav {
+    display: flex;
+    height: 80rpx;
+    background-color: #fff;
+}
+
+.nav .li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #626262;
+    font-size: 30rpx;
+}
+
+.nav .active {
+    color: #000;
+}
+
+.nav .active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 40%;
+    height: 3px;
+    margin-left: -20%;
+    background-color: #c90265;
+}
+
+/**
+ * 优惠券列表
+ */
+
+.cardList {
+    padding-top: 20rpx;
+}
+
+.cardList .li {
+    position: relative;
+    margin: 20rpx 30rpx;
+}
+
+.cardList .li .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 40rpx 0;
+}
+
+.cardList .li .info .info-l {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c90265;
+    border-right: 1px dashed #d2d2d2;
+    font-size: 60rpx;
+}
+
+.cardList .li .info .info-c {
+    flex: 0 0 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8rpx 0 8rpx 15rpx;
+}
+
+.cardList .li .info .info-c .h2 {
+    display: flex;
+}
+
+.cardList .li .info .info-c .h2 .em {
+    display: flex;
+    align-items: center;
+    height: 32rpx;
+    margin-right: 10rpx;
+    padding: 0 10rpx;
+    background-color: #c90265;
+    color: #fff;
+    font-size: 22rpx;
+}
+
+.cardList .li .info .info-c .h2 .span {
+    font-size: 26rpx;
+    line-height: 32rpx;
+}
+
+.cardList .li .info .info-c .p {
+    color: #8a8a8a;
+    font-size: 26rpx;
+}
+
+.cardList .li .info .info-r {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cardList .li .info .info-r text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110rpx;
+    height: 110rpx;
+    background-color: #c90265;
+    color: #fff;
+    border-radius: 20rpx;
+    font-size: 32rpx;
+    line-height: 1;
+}
+
+.cardList .li .info .disabled text {
+    background-color: #b1b1b1;
+}
+
+.cardList .no_data {
+    margin-top: 30%;
+    color: #626262;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.cardList .no_data image {
+    width: 30%;
+    margin: 0 auto 40rpx auto;
+}
+
+.cardList .btn_receive {
+    width: 30%;
+    height: 80rpx;
+    margin: 20rpx auto;
+    background-color: #c90265;
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    text-align: center;
+}

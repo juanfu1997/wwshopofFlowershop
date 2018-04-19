@@ -1,0 +1,31 @@
+<view class="page" hidden="1">
+	<view class="ikebana-title">花艺小班</view>
+	<view class="ikebana-curriculum">
+		<viwe class="curriculum-detail">
+			<view class="curriculumName">英式插花</view>
+			<view class="curruculum-ul" wx:for="{{curruculum}}">
+				<view class="curruculum-li">{{item.name}}</view>
+				<view class="curruculum-li">{{item.value}}</view>
+			</view>
+			
+			<view class="curriculumMore">
+				<image class="" mode="widthFix" src="../../images/taleOfFlower.png"></image>
+				<view class="">more>>></view> 
+			</view>
+		</viwe>
+		<view class="curriculum-join">报名</view>
+	</view>
+</view>
+<view class="classPage">
+	<view class="classInfo">
+		<view class="className">英式插花</view>
+		<view class="class-ul" wx:for="{{class}}">
+			<view class="class-li">{{item.name}}</view>
+			<view class="class-li">{{item.value}}</view>
+			<image wx:if="{{index==4}}" class="class-li" mode="widthFix" src="../../image/navigation.png"  />
+				
+		</view>
+	</view>
+	<view class="class-tips">*将在开课前15分钟通知您!</view>
+	<view class="signUp">报名</view>
+</view>

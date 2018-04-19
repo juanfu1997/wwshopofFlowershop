@@ -1,0 +1,72 @@
+page {
+    background-color: #f2f2f2;
+}
+
+.list {
+    padding: 60rpx 20rpx;
+}
+
+.list .li {
+    position: relative;
+    display: flex;
+    margin-bottom: 20rpx;
+    padding: 60rpx 20rpx 40rpx 20rpx;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.list .li .li-l {
+    flex: 1;
+    display: flex;
+}
+
+.list .li .li-l image {
+    width: 160rpx;
+}
+
+.list .li .li-l .info {
+    padding: 0 20rpx;
+    font-size: 30rpx;
+}
+
+.list .li .li-l .info .rule {
+    margin-top: 10rpx;
+    color: #5b5b5b;
+    font-size: 28rpx;
+}
+
+.list .li .li-l .info .score {
+    margin-top: 10rpx;
+    color: #c90265;
+    font-size: 32rpx;
+}
+
+.list .li .li-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    color: #c90265;
+    border-left: 1px dashed #a0a0a0;
+    font-size: 34rpx;
+    line-height: 1;
+}
+
+.list .li .label {
+    position: absolute;
+    top: 0;
+    left: 20rpx;
+    width: 30%;
+    height: 60rpx;
+    background-color: #c90265;
+    color: #fff;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+
+.list .li .disabled {
+    color: #7b7b7b;
+}

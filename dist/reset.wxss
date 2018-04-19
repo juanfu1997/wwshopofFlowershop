@@ -1,0 +1,35 @@
+view, input, checkbox, textarea {
+    box-sizing: border-box;
+}
+
+image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+page, input {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+input {
+    min-height: auto;
+}
+
+button {
+    border-radius: 0;
+}
+
+.clearfix::after {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+view[hidden] {
+    display: none !important;
+}

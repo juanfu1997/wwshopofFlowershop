@@ -1,0 +1,48 @@
+<!--pages/calender/calender.wxml-->
+<view id="calender-wrapper">
+	<view id="calender-title" class="clearfix">
+		<view id="date" class="item">
+			<view class="arrow left" hidden="{{isLeftHidden}}" data-dir="left" bindtap="chooseDate"><image src="../../image/arrow_left.png" mode="widthFix"></image></view>
+			<view class="time">{{time}}</view>
+			<view class="arrow right" hidden="{{isRightHidden}}" data-dir="right" bindtap="chooseDate"><image src="../../image/arrow_right.png" mode="widthFix"></image></view>
+		</view>
+		<!-- <view id="selections" class="item">
+			<view class="selectionsWrapper">
+				<view id="all" class="selection {{more}}" bindtap="tapAll">全部标签</view>
+				<view class="selection {{more}}" bindtap="tapIt" data-index="{{index}}" wx:for="{{typesArray}}" wx:key="index" hidden="{{isTagHidden}}">{{item.type}}
+					<view class="circle" hidden="{{!item.active}}" style="background-color: {{item.bgColor}}"></view>
+					<view class="circle" hidden="{{item.active}}"></view>
+			    </view>
+		    </view>
+		</view>
+		<view id="recommend-button" class="item" bindtap="goRec">推荐页</view> -->
+	</view>
+	<view id="days">
+		<view class="weekday">Sun</view>
+		<view class="weekday">Mon</view>
+		<view class="weekday">Tue</view>
+		<view class="weekday">Wed</view>
+		<view class="weekday">Thu</view>
+		<view class="weekday">Fri</view>
+		<view class="weekday">Sat</view>
+	</view>
+	<view id="calender-content">
+		<view id="month">
+			<view class="day" wx:for="{{allDays}}" wx:key="id" data-index="{{index}}" bindtap="goList">
+				<view class="num {{item.active}} {{item.theDay}}">
+					<view class="numText {{item.weekend}}">{{item.id}}</view>
+				</view>
+				<view class="holidays {{few}}">
+					<view class="list {{itemName.user}}" wx:for="{{item.holidays}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" style="background-color: {{itemName.bgColor}};">{{itemName.name}}</view>
+				</view>
+				<image wx:if="{{item.off}}" class="off" mode="widthFix" src="../../image/petal.png"></image>
+				<!-- <view wx:if="{{item.off}}" class="off">休</view> -->
+			</view>
+		</view>
+	</view>
+</view>
+<view class="footer">
+	<view class="hint">*点击日期查看推荐鲜花以及添加新事件</view>
+	<image style="background:center no-repeat;background-size: 100% 100%;" mode="widthFix" src="{{img}}flower-1.png"></image>
+</view>
+

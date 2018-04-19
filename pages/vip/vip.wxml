@@ -1,0 +1,21 @@
+<view class='page'>
+    <!-- 用户信息 -->
+    <view class='hd'>
+        <view class='card'>
+            <image src='{{img}}vip.png' mode='widthFix'></image>
+            <view class='card_no'>NO. {{user.phone}}</view>
+            <view class='card_name'>持卡人：{{user.relname}}</view>
+        </view>
+    </view>
+    <view class='bd'>
+        <!-- 列表 -->
+        <view class='list'>
+            <view class='li' wx:for="{{list}}" wx:key="{{index}}" data-page='{{item.page}}' bindtap='goPage'>
+                <image src='{{img}}{{item.icon}}.png' mode='aspectFit'></image>
+                <text class='name'>{{item.name}}</text>
+                <text class='value' wx:if="{{!item.page}}">{{item.value}}</text>
+                <view class='arrow-right' wx:if="{{item.page}}"></view>
+            </view>
+        </view>
+    </view>
+</view>

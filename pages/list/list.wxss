@@ -1,0 +1,551 @@
+page {
+	height: 100%;
+	width: 100%;
+}
+
+.header {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	align-items: flex-end;
+    -webkit-align-items: flex-end;
+	height: 9%;
+	padding: 0 10rpx;
+	border-bottom: 4rpx solid #fa5e5e;
+	color: #605068;
+	z-index: 2;
+}
+
+.header .label {
+   padding: 20rpx 0;
+   font-size: 30rpx;
+   width: 50%;
+   text-align: center;
+   border-top-right-radius: 30rpx;
+   border-top-left-radius: 30rpx;
+}
+
+.header .label.active {
+	color: #fff;
+	background-color: rgb(251,94,94);
+}
+
+.eventsWrapper {
+	height: 100%;
+}
+
+.events{
+	position: relative;
+	min-height: 100%;
+	margin-bottom: -420rpx;
+	padding-top: 13%;
+}
+
+.events .date {
+	color: #7a6e80;
+	font-size: 40rpx;
+	line-height: 100rpx;
+	text-align: center;
+}
+.recommend{
+}
+
+.rec-commodity{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.comm-img{
+	width: 60%;
+	margin: 0 auto;
+}
+.comm-name{
+	/*margin: 0 auto;*/
+	text-align: center;
+	font-size: 40rpx;
+	line-height: 1;
+}
+.rec-intro{
+	/*margin: 0 auto;*/
+	padding: 0 60rpx;
+	padding-top: 20rpx;
+	font-size: 28rpx;
+	line-height: 1;
+	display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rec-more{
+	color: #c1c1c1;
+	text-decoration: underline;
+	font-size: 28rpx;
+	line-height: 1;
+	text-align: center;
+	margin-right: 100rpx;
+	align-self: flex-end;
+}
+
+.eventIcon {
+	position: relative;
+	height: 20%;
+	margin: 0 auto;
+	background: url("https://www.korjo.cn/xcx/calendarImg/event.png") center bottom/60rpx 60rpx no-repeat;
+}
+
+.eventIcon .historyTitle {
+	position: absolute;
+	bottom: 70rpx;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #7a6e80;
+	font-size: 32rpx;
+}
+
+.history {
+	min-height: 80%;
+	padding: 0 30rpx;
+	background: url("https://www.korjo.cn/xcx/calendarImg/line.png") center center repeat-y;
+}
+
+.history .historyEvents {
+	padding-top: 20rpx;
+}
+
+.history .historyEvents .list {
+	margin-bottom: 60rpx;
+	position: relative;
+}
+
+.history .historyEvents .list .yearWrapper {
+	height: 60rpx;
+	position: relative;
+	text-align: center;
+	width: 30%;
+	margin: 0 auto;
+}
+
+.history .historyEvents .list .yearWrapper .year {
+	line-height: 1;
+	border-radius: 10rpx;
+	padding: 6rpx 10rpx;
+	font-size: 28rpx;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #ffffff;
+	background-color: rgb(218,64,65);
+}
+
+.history .historyEvents .list .yearWrapper .circle {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 25%;
+}
+
+.history .historyEvents .list:nth-of-type(odd) .yearWrapper .circle {
+	right: 0;
+}
+
+.history .historyEvents .list:nth-of-type(even) .yearWrapper .circle {
+	left: 0;
+}
+
+.history .historyEvents .list .eventTitle {
+	font-size: 28rpx;
+	text-decoration: underline;
+	position: absolute;
+	width: 35%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.history .historyEvents .list:nth-of-type(odd) .eventTitle {
+	padding-left: 15rpx;
+	right: 0;
+}
+
+.history .historyEvents .list:nth-of-type(even) .eventTitle {
+	padding-right: 15rpx;
+	left: 0;
+}
+
+.liForEvents {
+	margin-bottom: 30rpx;
+}
+
+.liForEvents .item{
+	position: relative;
+	padding: 25rpx 40rpx;
+	color: #605068;
+	font-size: 32rpx;
+	line-height: 1;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.liForEvents .item .circle {
+	margin-right: 10rpx;
+	display: inline-block;
+	vertical-align: middle;
+	width: 27rpx;
+	height: 27rpx;
+	border-radius: 50%;
+}
+
+.liForEvents .item .subTitle {
+	width: 85%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.liForEvents .item .subTitle.new {
+	color: rgb(241,101,98);
+}
+
+.liForEvents .item .button {
+	font-size: 30rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	position: absolute;
+	right: 100rpx;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background-color: rgb(251,94,94);
+	color: #fff;
+	width: 27%;
+	height: 55rpx;
+	line-height: 55rpx;
+	box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+
+.liForEvents .item .rightArrow {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.noContent {
+	color: #999;
+	text-align: center;
+	font-size: 32rpx;
+	margin-top: 60rpx;
+}
+
+.clearfooter {
+	height: 420rpx;
+	clear: both;
+}
+
+.moreInfo {
+	overflow: auto;
+	position: relative;
+	height: 420rpx;
+	font-size: 28rpx;
+	padding: 0 40rpx;
+}
+
+.moreInfo .oneInfo {
+	margin-bottom: 10rpx;
+}
+
+.moreInfo .follow {
+	color: #7d6b86;
+	text-decoration: underline;
+}
+
+.buttons {
+	box-shadow: 0 -1px 6px #dcdcdc;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 25rpx 40rpx;
+}
+
+.buttons .button {
+	border-radius: 15rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	width: 40%;
+	text-align: center;
+	font-size: 30rpx;
+	color: #fff;
+	background-color: #7d6b86;
+}
+
+.buttons .button:first-of-type {
+	float: left;
+}
+
+.buttons .button:nth-of-type(2) {
+	float: right;
+}
+
+
+/*添加事件的弹窗*/
+
+.lightbox, .darkbox{
+	background: rgba(0,0,0,0.2);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 1000;
+}
+.lightbox .box_container {
+    width: 80%;
+	border-radius: 30rpx;
+	top: 13%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: #fff;
+	position: fixed;
+	line-height: 1;
+	z-index: 1001;
+	padding: 60rpx 40rpx 70rpx;
+}
+.lightbox .box .submit_title{
+   text-align: center;
+   font-size: 30rpx;
+   color: #7d6b86;
+}
+
+.lightbox .box .inputWrapper {
+	margin: 40rpx 0;
+}
+
+.lightbox .box .inputWrapper.flex {
+	display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.lightbox .box .inputWrapper .circle {
+    margin-right: 10rpx;
+	display: inline-block;
+	vertical-align: middle;
+	width: 27rpx;
+	height: 27rpx;
+	border-radius: 50%;
+	background-color: #7d6b86;
+}
+
+.lightbox .box .inputWrapper .titleWrapper {
+	width: 40%;
+	display: inline-block;
+	font-size: 30rpx;
+}
+
+.lightbox .box .inputWrapper .inputContainer {
+	width: 90%;
+	font-size: 28rpx;
+}
+
+.lightbox .box .inputWrapper .noInput {
+	width: 90%;
+	line-height: 1.2;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28rpx;
+}
+
+.lightbox .box .inputWrapper  input {
+	padding-left: 10rpx;
+	width: 100%;
+	float: right;
+	height: 65rpx;
+	border: 1px solid #7d6b86;
+}
+
+.lightbox .box .inputWrapper .subTitle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.lightbox .box .inputWrapper .info {
+	height: 65rpx;
+	border: 1px solid #7d6b86;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 60%;
+	background: center right 10rpx/30rpx auto url("https://www.korjo.cn/xcx/calendarImg/down-arrow.png") no-repeat;
+}
+
+.lightbox .box .inputWrapper .info picker{
+	height: 100%;
+	width: 100%;
+	
+}
+
+.lightbox .box .inputWrapper .info .picker {
+	font-size: 30rpx;
+	height: 65rpx;
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.lightbox .box .inputWrapper.alarm {
+	height: 65rpx;
+}
+
+.lightbox .box .alarm .more {
+    font-size: 24rpx;
+    color:#626262;
+    padding-bottom: 25rpx;
+    margin-top: 10rpx;
+}
+
+.lightbox .box .switch {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 46rpx;
+    width: 76rpx;
+    border-radius: 35rpx;
+    color: #6b7381;
+    background: #bdc1c8;
+}
+
+.lightbox .box .switch.on {
+    background-color: #7d6b86;
+    transition: background-color 0.25s;
+}
+
+.lightbox .box .switch .handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rpx;
+    width: 42rpx;
+    height: 42rpx;
+    border-radius: 50%;
+    background: #fff;
+    transition: left .25s;
+}
+
+.lightbox .box .switch.on .handle {
+    left: 32rpx;
+    transition: left .25s;
+}
+
+
+.box .cancel {
+	border: none;
+	line-height: 1;
+	margin-bottom: 20rpx;
+	float: left;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+	padding: 20rpx 0;
+	text-align: center;
+	color: #7d6b86;
+	width: 47%;
+	background-color: #dfdce0;
+}
+
+.box .conform {
+	border: none;
+	line-height: 1;
+	margin-bottom: 20rpx;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+	padding: 20rpx 0;
+	text-align: center;
+	background-color: #dfdce0;
+	width: 47%;
+	float: right;
+	color: #fff;
+}
+
+.conform.qualified {
+	background-color: #7d6b86;
+}
+
+.lightbox .box .delete {
+	line-height: 1;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+	padding: 20rpx 0;
+	text-align: center;
+	background-color: #7d6b86;
+	color: #fff;
+	width: 100%;
+	clear: both;
+}
+
+.adding {
+   -webkit-animation: adding .5s;
+   animation: adding .5s;
+}
+
+/*提醒弹窗*/
+.darkbox .box_container {
+    width: 80%;
+	border-radius: 30rpx;
+	top: 13%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: #fff;
+	position: fixed;
+	line-height: 1;
+	z-index: 1001;
+	padding: 60rpx 40rpx 70rpx;
+}
+.darkbox .box .dialogue_title{
+   text-align: center;
+   font-size: 30rpx;
+   color: #7d6b86;
+}
+
+.darkbox .box .hintContent {
+   margin: 30rpx 0;
+   font-size: 30rpx;
+   line-height: 1.5;
+}
+
+@keyframes adding {
+
+	0% {
+	    opacity: 0;
+	    background-color: rgba(255, 255, 255, .4);
+	    -webkit-transform: translateY(20px);
+	    transform: translateY(20px);
+	}
+
+	50% {
+	    opacity: 1;
+	    background-color: rgba(255, 255, 255, .4);
+	}
+
+}

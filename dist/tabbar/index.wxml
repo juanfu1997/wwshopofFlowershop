@@ -1,0 +1,25 @@
+<template name="tabbar">
+    <view class="tabbar">
+
+        <view class="tab1 {{item.active?'active':''}}" wx:for="{{tabs1}}" wx:key="{{index}}" data-open-type="reLaunch" data-page="{{item.page}}" bindtap="goPage">
+            <image src="{{item.img}}?v=1"></image>
+            <text>{{item.text}}</text>
+            <button open-type="contact" session-from="87" wx:if="{{item.text=='客服'}}" catchtap="noop">客服</button>
+        </view>
+
+        <view class="tab2 {{item.active?'active':''}}" wx:for="{{tabs2}}" wx:key="{{index}}" data-open-type="reLaunch" data-page="{{item.page}}" bindtap="goPage">
+            <image src="{{item.img}}"></image>
+            <text>{{item.text}}</text>
+        </view>
+
+        <view class="tab3" wx:for="{{tabs3}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapTab">
+            <view class='line'></view>
+            <view class='text'>{{item.text}}</view>
+            <view class='ul' hidden='{{!item.show}}'>
+                <view class='li' wx:for="{{item.link}}" wx:key="{{index}}" data-page="{{item.page}}" data-param="id={{item.id}}" data-open-type="{{item.openType}}" bindtap='goPage'>{{item.weiwei_type}}</view>
+            </view>
+        </view>
+
+        <view class="btn btn{{item.style}}" wx:for="{{btns}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapButton">{{item.text}}</view>
+    </view>
+</template>

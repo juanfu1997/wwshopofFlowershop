@@ -1,0 +1,17 @@
+<view class="page">
+    <form bindsubmit="formSubmit">
+        <view class="section">
+            <input placeholder='请输入姓名' name="username"></input>
+        </view>
+        <view class="section">
+            <input type='number' placeholder='请输入手机号码' maxlength='11' name="phone"></input>
+        </view>
+		<view class="section">
+            <input password placeholder='请输入密码' name="password"></input>
+        </view>
+        <view class="btn_register">
+            <button formType="submit">注册并领取会员卡</button>
+        </view>
+		<view class='btn_login' data-page="login" bindtap='goPage'>会员登录</view>
+    </form>
+</view>

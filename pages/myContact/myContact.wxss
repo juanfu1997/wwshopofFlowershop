@@ -1,0 +1,108 @@
+page {
+    background-color: #f2f2f2;
+}
+
+.list {
+    margin-top: 20rpx;
+    padding-left: 40rpx;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.list .li {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 40rpx 20rpx 10rpx;
+    border-top: 1px solid #e5e5e5;
+    font-size: 30rpx;
+    line-height: 40rpx;
+}
+
+.list .li:nth-child(1) {
+    border-top: 0;
+}
+
+.list .li-l {
+    flex: 0 0 50rpx;
+    color: #c90265;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.list .li-l text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rpx;
+    height: 30rpx;
+    color: #c90265;
+    border: 1px solid #c90265;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.list .li-c {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list .li-c .phone {
+    color: #666;
+    font-size: 34rpx;
+}
+
+.list .li-c .h3 {
+    font-size: 32rpx;
+}
+
+.list .li-r {
+    padding-left: 20rpx;
+}
+
+.list .li-r text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rpx;
+    height: 40rpx;
+    color: #c90265;
+    border: 1px solid #c90265;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.list .li-r .arrow-right {
+    width: 12px;
+    height: 12px;
+    margin-right: 10rpx;
+    border-width: 2px 2px 0 0;
+    border-color: #bbb;
+    border-style: solid;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/**
+ * 按钮
+ */
+
+.btn_wp {
+    display: flex;
+    justify-content: center;
+    margin-top: 40rpx;
+}
+
+.btn_wp .btn {
+    width: 30%;
+    height: 80rpx;
+    margin: 0 10rpx;
+    background-color: #c90265;
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+<!-- 底部导航 -->
+<import src='/dist/tabbar/index.wxml' />
+<template is="tabbar" data="{{..._tabbar_}}" />
+
+<view class='page'>
+    <!-- 用户信息 -->
+    <view class='hd'>
+        <view class='avatar'>
+            <image src='{{user.photo}}'></image>
+        </view>
+        <view class='p'>
+            <text>{{user.relname}}</text>
+			<image src='{{img}}i-flower.png' mode='widthFix'></image>
+			<text>会员</text>
+        </view>
+    </view>
+    <view class='bd'>
+        <!-- 订单分类 -->
+        <view class='order'>
+            <view class='order-hd' data-page='myOrder' data-param="current=0" bindtap='goPage'>
+                <text>我的订单</text>
+                <text>查看全部 ></text>
+            </view>
+            <view class='order-bd'>
+                <view class='btn' wx:for="{{nav}}" wx:key="{{index}}" data-page='myOrder' data-param="current={{index+1}}" bindtap='goPage'>
+                    <image src='{{img}}{{item.icon}}.png' mode='aspectFit'></image>
+                    <text>{{item.name}}</text>
+                    <view class='label' wx:if="{{item.count}}">{{item.count}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 列表 -->
+        <view class='list'>
+            <view class='li' wx:for="{{list}}" wx:key="{{index}}" data-page='{{item.page}}' bindtap='goPage'>
+                <image src='{{img}}{{item.icon}}.png' mode='aspectFit'></image>
+                <view class='p'>
+                    <text>{{item.name}}</text>
+                </view>
+                <view class='arrow-right'></view>
+            </view>
+            <view class='li'>
+                <image src='{{img}}i-contact1.png' mode='aspectFit'></image>
+                <view class='p'>
+                    <text>联系客服</text>
+                </view>
+                <view class='arrow-right'></view>
+                <button open-type="contact" session-from="87">客服</button>
+            </view>
+        </view>
+    </view>
+</view>

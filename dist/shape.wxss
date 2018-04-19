@@ -1,0 +1,230 @@
+/**
+ * 箭头
+ */
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-width: 1px 1px 0 0;
+    border-color: #888;
+    border-style: solid;
+}
+
+.arrow-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-up::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-width: 1px 1px 0 0;
+    border-color: #888;
+    border-style: solid;
+    transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-down::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-width: 1px 1px 0 0;
+    border-color: #888;
+    border-style: solid;
+    transform: matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);
+}
+
+.arrow-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-left::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-width: 1px 1px 0 0;
+    border-color: #888;
+    border-style: solid;
+    transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+}
+
+.arrow-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-right::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-width: 1px 1px 0 0;
+    border-color: #888;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+
+/**
+ * 三角形
+ */
+
+.triangle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.triangle-up::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 17.3px 10px;
+    border-color: transparent transparent #007bff transparent;
+}
+
+.triangle-down::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 17.3px 10px 0 10px;
+    border-color: #007bff transparent transparent transparent;
+}
+
+.triangle-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 17.3px 10px 0;
+    border-color: transparent #007bff transparent transparent;
+}
+
+.triangle-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 17.3px;
+    border-color: transparent transparent transparent #007bff;
+}
+
+/**
+ * 关闭按钮
+ */
+
+.btn_close {
+    position: relative;
+    overflow: hidden;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.btn_close::before, .btn_close::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+}
+
+.btn_close::before {
+    transform: rotate(45deg);
+}
+
+.btn_close::after {
+    transform: rotate(-45deg);
+}
+
+/**
+ * 菱形
+ */
+
+.diamond {
+    position: relative;
+}
+
+.diamond::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 10px;
+    height: 9px;
+    margin-left: -7px;
+    background-color: #fff;
+    border-bottom: 1px solid #cecece;
+    border-left: 1px solid #cecece;
+    transform: rotate(-55deg) skew(-20deg);
+}
+
+/**
+ * 加号和减号
+ */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    width: 100rpx;
+    height: 70rpx;
+    background-color: #dcdbdc;
+}
+
+.btn::before, .btn::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20rpx;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -10rpx;
+    background: #000;
+}
+
+.btn_plus::after {
+    transform: rotate(90deg);
+}

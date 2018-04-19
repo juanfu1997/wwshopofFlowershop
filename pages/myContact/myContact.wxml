@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="list">
+        <view class="li" wx:for="{{list}}" wx:key="{{index}}">
+            <view class="li-c" data-idx="{{index}}" bindtap="tapLi">
+                <text>{{item.contact}}</text>
+                <text class='phone'>{{item.phone}}</text>
+            </view>
+            <view class="li-r" data-page="updateContact" data-param="id={{item.id}}" bindtap="goPage">
+                <text>i</text>
+            </view>
+        </view>
+		<!-- 新增联系方式 -->
+        <view class="li" data-page="addContact" bindtap='goPage'>
+            <view class="li-l">
+                <text>+</text>
+            </view>
+            <view class="li-c">
+                <text class='h3'>新增联系方式</text>
+            </view>
+            <view class="li-r">
+                <view class='arrow-right'></view>
+            </view>
+        </view>
+    </view>
+</view>

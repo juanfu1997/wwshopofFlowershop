@@ -1,0 +1,114 @@
+page{
+	width: 100%;
+	height: 100%;
+}
+.page{
+	width: 100%;
+	height: 100%;
+}
+.classPage{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.ikebana-title{
+	width: 100%;
+	text-align: center;
+}
+.ikebana-curriculum{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items:center;
+	background: url('http://bpic.588ku.com/back_pic/04/91/98/24590f3c7b6f893.jpg!/fh/300/quality/90/unsharp/true/compress/true')  100% 100% no-repeat  ;
+	background-size: 100% 100%;
+}
+.curriculum-detail{
+	width: 50%;
+	flex-grow: 1;
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  border-right:2rpx solid #e1e1e1;
+}
+.curriculumName{
+	font-size: 50rpx;
+	line-height: 50rpx;
+	margin-left: 50rpx;
+
+}
+.curruculum-ul{
+	width: 100%;
+	display: flex;
+}
+.curruculum-li:nth-child(1){
+	width: 200rpx;
+	margin-left: 50rpx;
+}
+.curruculum-li:nth-child(2){
+	width:50%;
+	flex-grow: 1;
+}
+.curriculumNumber{}
+.curriculumPrice{}
+.curriculumMore{
+	display: flex;
+	margin: 0 auto;
+}
+.curriculum-join{
+	width: 20%;
+	text-align: center;
+}
+
+.classInfo{
+	margin: 0 auto;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center; 
+	background-color: #e8e8e8;
+}
+.classInfo view{
+	/*border-bottom:  2rpx solid #ccc;*/
+}
+.className{
+	font-size: 40rpx;
+}
+.class-ul{
+	width: 100%;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	margin-top: 100rpx;
+}
+.class-ul:nth-last-child(1){
+	margin-bottom: 100rpx;
+}
+
+.class-li:nth-child(1){
+	width: 250rpx;
+}
+.class-li:nth-child(2){
+	flex:1 0 50% ;
+}
+.class-li:nth-child(3){
+	width: 36rpx;
+}
+.class-tips{
+	color: #a1a1a1;
+	font-size: 28rpx;
+	text-align: center;
+
+}
+.signUp{
+	
+	padding: 10rpx 40rpx;
+	border-radius: 15rpx;
+	font-size: 40rpx;
+	text-align: center;
+	background-color: red;
+}

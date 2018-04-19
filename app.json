@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/orderDetail/orderDetail",
+        "pages/logistic/logistic",
+        "pages/vipDesc/vipDesc",
+        "pages/exchange/exchange",
+        "pages/vip/vip",
+        "pages/topup/topup",
+        "pages/login/login",
+        "pages/register/register",
+        "pages/coupon/coupon",
+        "pages/myContact/myContact",
+        "pages/addContact/addContact",
+        "pages/updateContact/updateContact",
+        "pages/myCoupon/myCoupon",
+        "pages/sort/sort",
+        "pages/product/product",
+        "pages/cart/cart",
+        "pages/order/order",
+        "pages/myOrder/myOrder",
+        "pages/personal/personal",
+        "pages/taleOfFlowers/taleOfFlowers",
+        "pages/calender/calender",
+        "pages/list/list",
+        "pages/intro/intro",
+        "pages/follow/follow",
+        "pages/ikebana/ikebana",
+        "pages/taleDetail/taleDetail",
+        "pages/label/label",
+        "pages/giftCard/giftCard",
+        "pages/customized/customized",
+        "pages/remind/remind",
+        "pages/faq/faq"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#f9f9f9",
+        "navigationBarTitleText": "薇薇小商店",
+        "navigationBarTextStyle": "black",
+        "backgroundTextStyle": "light"
+    }
+}

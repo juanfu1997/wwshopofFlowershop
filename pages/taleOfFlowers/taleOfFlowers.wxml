@@ -1,0 +1,33 @@
+<view class="header">
+	<view class="label {{item.bg}}" wx:for="{{labelArray}}" wx:key="{{index}}" bindtap="checkList" data-index="{{index}}">{{item.label}}</view>
+</view>
+<view class="eventIcon" hidden="{{chosen != 0}}">
+		<view class="events flex" hidden="1">
+			<view class="category" wx:for="{{category}}" data-index="{{index}}" bindtap="getCategoryData">
+				<image class="cate-img" mode="widthFix" src="../../image/{{item.img}}"></image>
+				<view class="cate-name">{{item.name}}</view>
+			</view>
+			<!-- <view class="events-list"></view> -->
+		</view>
+		<view class="events flex" hidden="">
+				<view class="list-li" wx:for="{{flowerList}}" data-index="{{index}}" data-page="taleDetail" bindtap="getTableOfFlowers">
+					<image class="li-img" mode="widthFix" src="{{item.img}}"></image>
+					<view class="li-name">{{item.name}}</view>
+				</view>
+		</view>
+</view>
+<view class="eventsWrapper" hidden="{{chosen != 1}}">
+	<view class="events tips">
+		<view class="fqa" wx:for="{{fqa}}">
+			<text class="fqa-q"> {{item.q}}>>></text>
+			<text class="fqa-a">{{item.a}}</text>
+		</view>
+	</view>
+</view>
+<!-- <view class="page">
+	<view class="search">
+		<input class="search-input" type="text" name="" /> -->
+		<!-- <image></image> -->
+	<!-- </view> -->
+	<!-- <view class="search"></view> -->
+<!-- </view> -->

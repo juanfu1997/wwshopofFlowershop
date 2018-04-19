@@ -1,0 +1,56 @@
+<!-- 底部导航 -->
+<import src='/dist/tabbar/index.wxml' />
+<template is="tabbar" data="{{..._tabbar_}}" />
+
+<view class="page">
+    <!-- 提示 -->
+    <view class='tip' wx:if='{{showTip}}'>您还没有添加商品！</view>
+    <!-- 商品列表 -->
+    <view class='list'>
+        <view class='li' wx:for="{{list}}" wx:key="{{index}}">
+            <!-- 多选按钮 -->
+            <view class='li-l' data-idx='{{index}}' bindtap='selectProduct'>
+                <radio value="r1" checked="{{item.checked?'true':''}}" color='#c90265' />
+            </view>
+            <view class='li-c'>
+                <!-- 商品图 -->
+                <view class='img' data-param="id={{item.id}}" data-page="product" bindtap='goPage'>
+                    <image src='{{item.image}}' mode='aspectFill'></image>
+                </view>
+                <!-- 商品信息 -->
+                <view class='info'>
+                    <view class='info-hd'>
+                        <text>{{item.name}}</text>
+                        <view class='btn_close' data-idx="{{index}}" bindtap='delProduct'></view>
+                    </view>
+					<view class='info-bd'>
+                        <text>颜色分类：{{item.color}} 尺码：{{item.size}}</text>
+                    </view>
+                    <view class='info-ft'>
+                        <text>¥{{item.price}}</text>
+                        <!-- 购买数量 -->
+                        <view class='nums'>
+                            <view class='btn btn_minus' data-idx="{{index}}" bindtap='minus'></view>
+                            <input type='number' value='{{item.count}}' disabled="true"></input>
+                            <view class='btn btn_plus' data-idx="{{index}}" bindtap='plus'></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部栏 -->
+    <view class='account' wx:if='{{list.length > 0}}'>
+        <view class='account-l' bindtap='selectAll'>
+            <label>
+                <radio value="r1" checked="{{checked?'true':''}}" color='#c90265' />
+                <text>全选</text>
+            </label>
+        </view>
+        <view class='account-c'>
+            <text decode='true'>不含运费&nbsp;&nbsp;合计：</text>
+            <text class='price'>¥{{price}}</text>
+        </view>
+        <view class='account-r' bindtap='submit'>结 算</view>
+    </view>
+</view>

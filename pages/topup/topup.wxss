@@ -1,0 +1,45 @@
+page {
+    background-color: #f2f2f2;
+}
+
+.hd {
+    padding: 20rpx 40rpx 30rpx 40rpx;
+    background-color: #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.hd .row {
+    display: flex;
+    align-items: center;
+    height: 60rpx;
+    margin-bottom: 40rpx;
+    color: #626262;
+    font-size: 32rpx;
+}
+
+.hd .row image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.hd .row text {
+    margin: 0 10rpx;
+}
+
+.hd .row input {
+    flex: 1;
+    height: 100%;
+    padding-left: 20rpx;
+    background-color: #eee;
+    border: 1px solid #e5e5e5;
+}
+
+.hd .btn_submit {
+    height: 80rpx;
+    background-color: #c90265;
+    color: #fff;
+	border-radius: 20rpx;
+    font-size: 34rpx;
+    line-height: 80rpx;
+    text-align: center;
+}

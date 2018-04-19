@@ -1,0 +1,24 @@
+<view class="page">
+    <view class="list">
+        <view class="li" wx:for="{{list}}" wx:key="{{index}}">
+            <view class="li-l">
+                <image src='{{item.product_cover}}' mode='widthFix'></image>
+                <view class='info'>
+                    <view class='name'>{{item.product_name}}</view>
+                    <view class="rule">积分兑换后付款时自动抵扣</view>
+                    <view class="score">{{item.threshold}}积分</view>
+                </view>
+            </view>
+            <view class="li-r" wx:if="{{item.status==0&&item.enabled}}" data-id="{{item.id}}" bindtap='exchange'>
+                <text>立即\n兑换</text>
+            </view>
+            <view class="li-r disabled" wx:if="{{item.status==0&&!item.enabled}}">
+                <text>不可\n兑换</text>
+            </view>
+            <view class="li-r disabled" wx:if="{{item.status==1}}">
+                <text>已兑换</text>
+            </view>
+            <view class='label'>减{{item.face_value}}元</view>
+        </view>
+    </view>
+</view>

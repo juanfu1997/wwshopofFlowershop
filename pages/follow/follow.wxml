@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="title">关注【KORJO】公众号接收提醒</view>
+    <view class="desc">
+    	由于小程序消息推送限制，7天以上的提醒需要通过公众号推送。您只需要关注【KORJO】公众号，即可获得提醒。
+    </view>
+    <view class="wrapper">
+    	<view class="subtitle">关注方法一：</view>
+    	<view class="h3">搜索【KORJO】公众号，并关注</view>
+    </view>
+    <view class="wrapper">
+    	<view class="subtitle">关注方法二：</view>
+    	<view class="info">
+    		<view class="h3">1) 点击右上角【...】图标，选择【关于KORJO公关小牛历】</view>
+    		<image src="{{img}}hint1.jpg" class="hint" mode="widthFix"></image>
+    		<view class="h3">2) 点击【相关公众号KORJO】</view>
+    		<image src="{{img}}hint2.jpg" class="hint" mode="widthFix"></image>
+    		<view class="h3">3) 点击【关注】即可</view>
+    		<image src="{{img}}hint3.jpg" class="hint" mode="widthFix"></image>
+    	</view>
+    </view>
+    <view class="longbtn">
+        <view class="btn" bindtap="goBack">返回</view>
+    </view>
+</view>

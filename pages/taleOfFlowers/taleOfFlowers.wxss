@@ -1,0 +1,100 @@
+page {
+	height: 100%;
+	width: 100%;
+}
+
+.header {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	align-items: flex-end;
+    -webkit-align-items: flex-end;
+	height: 9%;
+	padding: 0 10rpx;
+	border-bottom: 4rpx solid #fa5e5e;
+	color: #605068;
+	z-index: 2;
+}
+
+.header .label {
+   padding: 20rpx 0;
+   font-size: 30rpx;
+   width: 50%;
+   text-align: center;
+   border-top-right-radius: 30rpx;
+   border-top-left-radius: 30rpx;
+}
+
+.header .label.active {
+	color: #fff;
+	background-color: rgb(251,94,94);
+}
+.history {
+	min-height: 80%;
+	padding: 0 30rpx;
+	/*background: url("https://www.korjo.cn/xcx/calendarImg/line.png") center center repeat-y;*/
+}
+.eventsWrapper {
+	height: 100%;
+}
+.events{
+	position: relative;
+	min-height: 100%;
+	margin-bottom: -420rpx;
+	padding-top: 13%;
+}
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.ul{
+	display: flex;
+}
+.tips{
+	background-color: #f1f1f1;
+}
+.fqa{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20rpx;
+	padding:20rpx 20rpx;
+	background-color: #fff;
+}
+.fqa-q{
+}
+.fqa-a{
+	color:#a1a1a1;
+	font-size: 28rpx;
+}
+.category{
+	flex: 0 0 34%;
+	margin-top: 40rpx;
+}
+.cate-img{}
+.cate-name{
+	text-align: center;
+}
+
+.page{
+	width: 100%;
+	height: 100%;
+}
+.search{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+.search-input{
+	background-color: #ccc;
+	width: 80%;
+	/*flex-grow: 1;*/
+}

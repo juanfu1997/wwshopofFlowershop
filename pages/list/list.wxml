@@ -1,0 +1,114 @@
+<!--pages/list.wxml-->
+<view class="header">
+	<view class="label {{item.bg}}" wx:for="{{labelArray}}" wx:key="{{index}}" bindtap="checkList" data-index="{{index}}">{{item.label}}</view>
+</view>
+<!-- <view class="eventIcon" hidden="{{chosen != 0}}">
+	<text class="historyTitle">点击事件，认识历史</text>
+</view>
+<view class="history" hidden="{{chosen != 0}}">
+	<view class="historyEvents">
+		<view class="list" wx:for="{{histroyArray}}" wx:key="{{index}}">
+			<view class="yearWrapper">
+				<view class="year">{{item.year}}</view>
+				<image class="circle" wx:if="{{index % 2 == 0}}" src="../../image/circleR.png" mode="widthFix"></image>
+				<image class="circle" wx:if="{{index % 2 != 0}}" src="../../image/circleL.png" mode="widthFix"></image>
+		    </view>
+		    <view class="eventTitle" bindtap="goArticle" data-id="{{item.id}}">{{item.event_title}}</view>
+		</view>
+	</view>
+</view> -->
+<view class="eventsWrapper" hidden="{{chosen != 0}}">
+	<view class="events">
+		<view class="recommend">
+			<view class="rec-commodity" wx:for="{{recommend}}">
+				<image class="comm-img" mode="widthFix" src="{{item.img}}"></image>
+				<view class="comm-name">{{item.name}}</view>
+				<view class="rec-intro" style="{{item.lineClamp}}">{{item.intro}}</view>
+				<view class="rec-more" data-index="{{index}}" hidden="{{!item.lineClamp}}" bindtap="showMoreIntro">显示更多>>></view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="eventsWrapper" hidden="{{chosen != 1}}">
+	<view class="events">
+		<view class="date">{{date}}</view>
+		<view class="noContent" wx:if="{{noContent}}">点击添加自定义事件可通过微信接收事件提醒</view>
+		<view class="liForEvents">
+			<view class="item {{adding}}" wx:for="{{listArray}}" wx:key="index" data-index="{{index}}" bindtap="goEvent">
+				<view class="circle" style="background-color: {{item.bgColor}}"></view>
+				<view class="subTitle {{item.new}}">{{item.title}}</view>
+				<!-- <view class="button" catchtap="goQrcode" wx:if="{{item.isHoliday}}">我要去旅行</view> -->
+				<view class="button" wx:key="index" data-index="{{index}}" catchtap="goIntro" wx:if="{{item.isShowArrow}}">节日鲜花</view>
+				<image src="../../image/right_arrow.png" class="rightArrow" ></image>
+			</view>
+		</view>
+		<view class="clearfooter"></view>
+	</view>
+	<view class="moreInfo">
+		<view class="oneInfo">
+			*如果您有新的节日资料，可发邮件到bron@korjo.cn。如成功采用后，会收到我们的红包奖励噢。
+		</view>
+		<view class="oneInfo">
+			*您可以自定义事件，添加属于自己的节日，并启用“微信消息提醒”功能。
+		</view>
+		<view class="oneInfo">
+			*七天后的节日提醒，请先关注【KORJO公众号】。
+			<text class="follow" bindtouchstart="goFollow">查看关注方法</text>
+		</view>
+	</view>
+	<view class="buttons">
+		<view bindtap="goCalender" class="button goCalender">返回日历</view>
+		<view class="button" mode="widthFix" bindtap="addEvent">＋自定义事件</view>
+	</view>
+</view>
+<view class="lightbox" hidden="{{isAddEventsHidden}}">
+    <view class="box_container">
+		<form class="box" bindsubmit="send" report-submit="true">
+			<view class="submit_title">{{submitTitle[submitType]}}</view>
+			<view class="inputWrapper flex">
+				<view class="circle"></view>
+				<view class="inputContainer">
+					<input placeholder="填写您要记录的事件，建议20个字以内" name="activity" value="{{eventValue}}" bindinput="eventInput" maxlength="20" placeholder-style="font-size: 24rpx; color: #d0d0d0; padding-left: 10rpx;" focus="{{focus}}" />
+				</view>
+				<view class="inputWrapper">
+					<view class="circle"></view>
+					<view class="noInput">{{holidayForNotice}}</view>
+			    </view>
+		    </view>
+		    <view class="inputWrapper clearfix">
+		    	<view class="titleWrapper">
+			    	<view class="circle"></view>
+					<view class="subTitle">事件时间：</view>
+				</view>
+				<view class="info">
+				    <picker bindchange="chooseBeTime" mode="time" value="{{beTime}}" start="06:00" end="23:59">
+				       <view class="picker">{{beTime}}</view>
+				    </picker>
+				</view>
+			</view>
+			<view class="inputWrapper alarm flex">
+                <view class="titleWrapper">
+			    	<view class="circle"></view>
+					<view class="subTitle">开启提醒：</view>
+				</view>
+                <view class="switch {{switchStatus}}" bindtap="turnOnMessage">
+                    <view class="handle"></view>
+                </view>
+            </view>
+			<view class="cancel" bindtap="cancel">取消</view>
+			<button class="conform {{eventValue  ? 'qualified' : ''}}" plain="true" formType="submit">确定</button>
+			<!-- <view wx:if="{{submitType == 1 ? true : false}}" class="delete" bindtap="delete">删除事件</view> -->
+		</form>
+	</view>
+</view>
+<view class="darkbox" hidden="{{isConformMessageHidden}}">
+    <view class="box_container">
+		<view class="box">
+			<view class="dialogue_title">提示</view>
+			<view class="hintContent">请确认是否删除该事件</view>
+			<button class="cancel" plain="true" bindtap="no">取消</button>
+			<button class="conform qualified"  plain="true" bindtap="yes">确定</button>
+		</view>
+	</view>
+</view>
+

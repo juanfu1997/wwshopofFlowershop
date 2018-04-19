@@ -1,0 +1,64 @@
+/**index.wxss**/
+.page {
+    padding: 30rpx 40rpx 130rpx;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 32rpx;
+    color: #7d6b86;
+}
+
+.desc {
+    margin: 20rpx 0;
+    font-size: 30rpx;
+    padding: 20rpx;
+    background-color: #f9f9f9;
+
+}
+
+.info .hint {
+    box-shadow: 2px 2px 4px #ccc;
+    width: 100%;
+    margin: 20rpx auto;
+}
+
+.wrapper {
+    
+}
+
+.wrapper .subtitle {
+    font-size: 30rpx;
+    color: #7d6b86;
+    margin-bottom: 20rpx;
+}
+
+.wrapper .h3 {
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+}
+
+.longbtn {
+  padding: 25rpx 50rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fbfbfb;
+  box-shadow: 0 -1px 6px #dcdcdc;
+  color: #fff;
+}
+
+.longbtn .btn {
+  width: 80%;
+  line-height: 1;
+  padding: 25rpx 0;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  background-color: #7d6b86;
+}
